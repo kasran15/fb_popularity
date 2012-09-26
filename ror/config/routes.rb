@@ -1,4 +1,8 @@
 FbPopularity::Application.routes.draw do
+  resources :crushes
+
+  resources :auth_tokens
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
