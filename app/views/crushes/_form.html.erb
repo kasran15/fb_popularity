@@ -1,0 +1,25 @@
+<%= form_for(@crush) do |f| %>
+  <% if @crush.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@crush.errors.count, "error") %> prohibited this crush from being saved:</h2>
+
+      <ul>
+      <% @crush.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :crush %><br />
+    <%= f.text_field :crush %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

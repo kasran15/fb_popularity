@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fbid:</b>
+  <%= @auth_token.fbId %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%= @auth_token.token %>
+</p>
+
+
+<%= link_to 'Edit', edit_auth_token_path(@auth_token) %> |
+<%= link_to 'Back', auth_tokens_path %>
