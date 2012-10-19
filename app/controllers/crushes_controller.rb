@@ -10,6 +10,17 @@ class CrushesController < ApplicationController
     end
   end
 
+	# GET /crushes/fetch/user_id
+	# GET /crushes/fetch/user_id.json
+
+  def fetch
+    @crush = Crush.where(:user => params[:id])
+
+    respond_to do |format|
+      format.json { render json: @crush }
+    end
+  end
+
   # GET /crushes/1
   # GET /crushes/1.json
   def show

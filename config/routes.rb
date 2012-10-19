@@ -2,6 +2,8 @@ FbPopularity::Application.routes.draw do
   resources :crushes
 
   resources :auth_tokens
+	
+	match 'crushes/fetch/:id' => 'crushes#fetch'	
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
